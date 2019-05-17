@@ -66,8 +66,3 @@ RSpec.describe LinkedList do
     end
   end
 end
-
-
-# => <Node @surname="Lawson" @next_node=<Node @surname="Brooks" ... > #5678904567890>
-# > list.to_string
-# => "The McKinney family, followed by the Lawson family, followed by the Brooks family, followed by the Henderson family"

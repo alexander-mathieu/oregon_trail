@@ -22,6 +22,12 @@ class LinkedList
   end
 
   def to_string
-    "The #{@head.surname} family"
+    if @head.nil?
+      "There are no families!"
+    elsif @head.next_node.nil?
+      "The #{@head.surname} family"
+    else
+      @head.next_node.caravan_names("The #{@head.surname} family")
+    end
   end
 end

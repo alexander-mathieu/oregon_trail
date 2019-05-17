@@ -24,7 +24,7 @@ RSpec.describe LinkedList do
 
       @linked_list.append("Surname 2")
 
-      expect(@linked_list.head.next_node).to eq("Surname 2")
+      expect(@linked_list.head.next_node.surname).to eq("Surname 2")
     end
 
     it "#count" do
@@ -34,7 +34,7 @@ RSpec.describe LinkedList do
 
       @linked_list.append("Surname 2")
 
-      expect(@linked_list.count).to eq(1)
+      expect(@linked_list.count).to eq(2)
     end
 
     it "#to_string" do
@@ -44,7 +44,7 @@ RSpec.describe LinkedList do
 
       @linked_list.append("Surname 2")
 
-      expect(@linked_list.to_string).to eq("The Rhodes family, followed by the Hardy family")
+      expect(@linked_list.to_string).to eq("The Surname family, followed by the Surname 2 family")
     end
   end
 end

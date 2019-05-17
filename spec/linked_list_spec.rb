@@ -3,7 +3,6 @@ require './lib/linked_list.rb'
 
 RSpec.describe LinkedList do
   before :each do
-    @node = Node.new("Surname")
     @linked_list = LinkedList.new
   end
 
@@ -19,7 +18,8 @@ RSpec.describe LinkedList do
     it "#append" do
       @linked_list.append("Surname")
 
-      expect(@linked_list.head).to eq(@node)
+      expect(@linked_list.head.surname).to eq("Surname")
+      expect(@linked_list.head.next_node).to eq(nil)
     end
 
     it "#count" do
@@ -31,7 +31,7 @@ RSpec.describe LinkedList do
     it "#to_string" do
       @linked_list.append("Surname")
 
-      expect(@linked_list.count).to eq(1)
+      expect(@linked_list.to_string).to eq("The Surname Family")
     end
   end
 end

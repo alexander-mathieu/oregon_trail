@@ -13,6 +13,15 @@ class LinkedList
     end
   end
 
+  # def prepend(surname)
+  #   if @head.nil?
+  #     @head = Node.new(surname)
+  #   else
+  #     @head.assume_next_position
+  #     @head = Node.new(surname)
+  #   end
+  # end
+
   def count
     if @head.nil?
       return 0

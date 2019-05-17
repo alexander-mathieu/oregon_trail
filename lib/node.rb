@@ -15,6 +15,15 @@ class Node
     end
   end
 
+  # def assume_next_position
+  #   if @next_node.nil?
+  #     @next_node = Node.new(@surname)
+  #   else
+  #     @next_node.assume_next_position
+  #     @next_node = Node.new(@surname)
+  #   end
+  # end
+
   def count(total)
     if @next_node.nil?
       return total

@@ -54,6 +54,7 @@ RSpec.describe LinkedList do
       @linked_list.prepend("Surname 3")
 
       expect(@linked_list.head.surname).to eq("Surname 3")
+      expect(@linked_list.head.next_node).to eq("Surname")
     end
 
     it "#insert" do

@@ -46,5 +46,28 @@ RSpec.describe LinkedList do
 
       expect(@linked_list.to_string).to eq("The Surname family, followed by the Surname 2 family")
     end
+
+    it "#prepend" do
+      @linked_list.append("Surname")
+      @linked_list.append("Surname 2")
+
+      @linked_list.prepend("Surname 3")
+
+      expect(@linked_list.head.surname).to eq("Surname 3")
+    end
+
+    it "#insert" do
+      @linked_list.append("Surname")
+      @linked_list.append("Surname 2")
+
+      @linked_list.insert(1, "Surname 3")
+
+      expect(@linked_list.head.next_node.surname).to eq("Surname 3")
+    end
   end
 end
+
+
+# => <Node @surname="Lawson" @next_node=<Node @surname="Brooks" ... > #5678904567890>
+# > list.to_string
+# => "The McKinney family, followed by the Lawson family, followed by the Brooks family, followed by the Henderson family"
